@@ -1,1 +1,9 @@
-<p>todo works!</p>
+<p class="startP" *ngIf="control">Recupero Task...</p>
+
+<ng-container *ngIf="!control">
+  <div class="container d-flex  flex-column w-25 align-items-center">
+    <p class="text-center mt-5">{{lista}}</p>
+    <input class=" startP" type="text" [(ngModel)]="task" />
+    <button (click)="aggiungiTask()" class="btn btn-primary mt-5">Aggiungi task</button>
+  </div>
+</ng-container>

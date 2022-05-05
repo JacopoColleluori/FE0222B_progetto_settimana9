@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="container-fluid ">
+    <a class="navbar-brand" href="javascript:void(0)">Prog. settimana 9</a>
+    <div class="navbar-collapse justify-content-center">
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            [routerLink]="'/'"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/todo']" routerLinkActive="active"
+            >Cose da fare</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/completati']"
+            routerLinkActive="active"
+            >Task completate</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
