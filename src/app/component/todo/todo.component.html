@@ -7,14 +7,14 @@
     <ul class="list-group">
       <li
         *ngFor="let task of this.taskArray"
-        class=" list-group-item align-items-center mt-4 "
+        class=" list-group-item align-items-center mt-4 h3"
       >
 
-       <p class="h3">
+
           <button type="button" class="btn btn-primary " (click)="modifica(task.id)">Completa Task</button>
           {{ task.title }}
 
-       </p>
+
       </li>
       <li *ngIf="caricamento">...</li>
     </ul>

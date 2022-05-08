@@ -1,11 +1,10 @@
   <h1  class="text-center">{{messageTask()}}</h1>
 <p class="startP h4" *ngIf="caricamento">Recupero Task...</p>
 
-<div class="container d-flex flex-column w-25 align-items-center">
-  <ul>
+<div class="container d-flex flex-column w-100 align-items-center">
+  <ul class="list-group">
     <li *ngIf="caricamento">...</li>
-  <li *ngFor="let task of this.arrayCompl" class="d-flex justify-content-evenly align-items-center h4">
-
+  <li *ngFor="let task of this.arrayCompl" class="  list-component h4">
     {{ task.title }}
   </li>
 
