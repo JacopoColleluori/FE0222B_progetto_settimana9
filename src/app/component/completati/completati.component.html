@@ -1,1 +1,14 @@
-<p class="startP">Recupero Task...</p>
+  <h1  class="text-center">{{messageTask()}}</h1>
+<p class="startP" *ngIf="caricamento">Recupero Task...</p>
+
+<div class="container d-flex flex-column w-25 align-items-center">
+  <ul>
+    <li *ngIf="caricamento">...</li>
+  <li *ngFor="let task of this.arrayCompl" class="d-flex justify-content-evenly align-items-center">
+
+    {{ task.title }}
+  </li>
+
+  </ul>
+</div>
+

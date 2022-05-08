@@ -1,9 +1,26 @@
+<h1 class="text-center h1">{{messageTask()}}</h1>
 <p class="startP" *ngIf="control">Recupero Task...</p>
 
 <ng-container *ngIf="!control">
-  <div class="container d-flex  flex-column w-25 align-items-center">
-    <p class="text-center mt-5">{{lista}}</p>
-    <input class=" startP" type="text" [(ngModel)]="task" />
-    <button (click)="aggiungiTask()" class="btn btn-primary mt-5">Aggiungi task</button>
+  <div class="container d-flex flex-column w-100 align-items-center">
+    <p class="mt-5 h3" *ngIf="this.taskArray.length<1">Immetti una task</p>
+    <ul class="list-group">
+      <li
+        *ngFor="let task of this.taskArray"
+        class=" list-group-item align-items-center mt-4 "
+      >
+
+       <p class="h3">
+          <button type="button" class="btn btn-primary " (click)="modifica(task.id)">Completa Task</button>
+          {{ task.title }}
+
+       </p>
+      </li>
+      <li *ngIf="caricamento">...</li>
+    </ul>
+    <input type="text" [(ngModel)]="task" (keyup.enter)="aggiungi(task);clear()" class="h3"/>
+    <button (click)="aggiungi(task);clear()" class="btn btn-primary  mt-5">
+      Aggiungi task
+    </button>
   </div>
 </ng-container>

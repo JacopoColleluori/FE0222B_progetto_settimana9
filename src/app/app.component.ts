@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Todo } from './interfaces/todo';
 
 
 @Component({
@@ -8,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FE0222B-progetto-settimana9';
+  arrayTask!:Todo[];
 }
